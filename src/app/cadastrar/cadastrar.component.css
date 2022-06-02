@@ -1,0 +1,12 @@
+#img-bg{
+    background-image: url('https://i.imgur.com/aBItOqD.png');
+    min-height: 730px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {margin: 0%}
+
+.canCad {margin: 7%}
+
