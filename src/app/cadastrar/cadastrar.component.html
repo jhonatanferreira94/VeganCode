@@ -10,32 +10,32 @@
 
           <div class="form-group">
             <label for="nome">Nome:</label>
-            <input class="form-control" type="text" name="nome" id="nome">
+            <input [(ngModel)]="user.nome" class="form-control" type="text" name="nome" id="nome">
           </div>
 
           <div class="form-group">
             <label for="usuario">Usuário:</label>
-            <input class="form-control" type="text" name="usuario" id="usuario">
+            <input [(ngModel)]="user.usuario" type="text" name="usuario" id="usuario">
           </div>
 
           <div class="form-group">
             <label for="foto">Link da foto:</label>
-            <input class="form-control" type="text" name="foto" id="foto">
+            <input [(ngModel)]="user.foto" class="form-control" type="text" name="foto" id="foto">
           </div>
 
           <div class="form-group">
             <label for="senha">Senha:</label>
-            <input class="form-control" type="text" name="senha" id="senha">
+            <input (input)="confirmSenha($event)"class="form-control" type="text" name="senha" id="senha">
           </div>
 
           <div class="form-group">
             <label for="confirmSenha">Confirmar senha:</label>
-            <input class="form-control" type="text" name="senha" id="senha">
+            <input [(ngModel)]="user.senha" class="form-control" type="text" name="senha" id="senha">
           </div>
 
           <div class="form-group">
             <label for="usuario">Tipo de usuário:</label>
-            <select class="form-control" name="" id="tipo">
+            <select class="form-control" name="" id="tipo" (change)="tipoUser($event)">
               <option>Selecione um tipo de usuário:</option>
               <option value="normal">Normal</option>
               <option value="adm">Adminstrador</option>
@@ -43,8 +43,10 @@
           </div>
 
           <div class="d-flex justify-content-center canCad">
-            <button type="submit" class="btn col-md-3 text-white mr-4" style="background-color: #d35151" routerLink="/entrar">Cancelar</button>
-            <button type="submit" class="btn col-md-3 text-white mr-4" style="background-color: #789659">Cadastrar</button>
+            <button type="submit" class="btn col-md-3 text-white mr-4" style="background-color: #d35151"
+              routerLink="/entrar">Cancelar</button>
+            <button type="submit" class="btn col-md-3 text-white mr-4"
+              style="background-color: #789659" (click)="cadastrar()">Cadastrar</button>
 
           </div>
 
